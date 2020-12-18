@@ -5,10 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".fragments.HeaderFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
+        android:id="@+id/displayImageView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:contentDescription="@string/img_dsc"
+        android:layout_height="match_parent" />
 
 </FrameLayout>

@@ -2,4 +2,8 @@
     <string name="app_name">food_delivery_demo</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="kazarov">Kazarov</string>
+    <string name="delivery">delivery</string>
+    <string name="img_dsc">image</string>
+    <string name="filters">FILTERS</string>
 </resources>

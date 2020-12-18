@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_marginStart="@dimen/twenty_four_dp"
+    android:layout_marginEnd="@dimen/twenty_four_dp"
+    android:layout_marginTop="@dimen/twenty_four_dp"
+    app:cardCornerRadius="@dimen/sixteen_dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/itemImageView"
+            android:src="@drawable/t"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:contentDescription="@string/img_dsc"
+            android:layout_height="@dimen/two_hundred_and_fifty_dp"/>
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:textSize="@dimen/font_size_sixteen"
+            android:textStyle="bold"
+            android:text="Hawaiian"
+            android:layout_marginStart="@dimen/twenty_four_dp"
+            android:layout_marginTop="@dimen/twenty_four_dp"
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:textSize="@dimen/font_size_thirteen"
+            android:text="There is no place like home, There is no p"
+            android:layout_marginStart="@dimen/twenty_four_dp"
+            android:layout_marginTop="@dimen/eight_dp"
+            android:textColor="@color/ash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/twenty_four_dp"
+            android:layout_marginBottom="@dimen/twenty_four_dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/detailsTextView"
+                    android:textSize="@dimen/font_size_thirteen"
+                    android:text="200 grams, 35 cm"
+                    android:textColor="@color/ash"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/buttonTextView"
+                    android:textSize="@dimen/font_size_fourteen"
+                    android:textStyle="bold"
+                    android:background="@drawable/item_button_background_black"
+                    android:paddingTop="@dimen/eight_dp"
+                    android:paddingBottom="@dimen/eight_dp"
+                    android:paddingStart="@dimen/sixteen_dp"
+                    android:paddingEnd="@dimen/sixteen_dp"
+                    android:text="46 USD"
+                    android:textColor="@color/ash"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

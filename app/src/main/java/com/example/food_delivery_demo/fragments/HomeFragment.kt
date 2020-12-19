@@ -11,7 +11,6 @@ import com.example.food_delivery_demo.Constants
 import com.example.food_delivery_demo.R
 import com.example.food_delivery_demo.adapters.MenuPagerAdapter
 import com.example.food_delivery_demo.adapters.ViewPagerAdapter
-import kotlinx.android.synthetic.main.content_scrolling.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import me.relex.circleindicator.CircleIndicator
 import java.util.*

@@ -14,7 +14,7 @@ class HeaderFragment : Fragment(R.layout.fragment_header) {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val displayImage = arguments?.getInt(Constants.HEADER_IMAGE_KEY)!!
-        displayImageView.setImageResource(displayImage)
+//        val displayImage = arguments?.getInt(Constants.HEADER_IMAGE_KEY)!!
+        displayImageView.setImageResource(R.drawable.t)
     }
 }

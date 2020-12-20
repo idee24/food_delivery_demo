@@ -3,12 +3,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.CheckoutFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/topLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/forty_dp"
+            android:layout_marginStart="@dimen/twenty_four_dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:contentDescription="@string/img_dsc"
+                android:src="@drawable/chevron_left_black"
+                android:layout_width="@dimen/thirty_two_dp"
+                android:layout_height="@dimen/thirty_two_dp"/>
+
+            <TextView
+                android:text="@string/menu"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/font_size_sixteen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/checkoutPager"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topLayout"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/checkoutTabs"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty_dp"
+            android:background="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topLayout"
+            app:tabGravity="start"
+            app:tabIndicatorColor="@android:color/black"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@android:color/black"
+            app:tabTextColor="@color/ash" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Button"
+            android:tint="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:backgroundTint="@android:color/white"
+            app:fabCustomSize="@dimen/sixty_dp"
+            android:layout_marginEnd="@dimen/thirty_two_dp"
+            android:layout_marginBottom="@dimen/thirty_two_dp"
+            android:src="@drawable/card_icon_black"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

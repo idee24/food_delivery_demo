@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CheckoutPagerFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/sixty_dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/checkoutRecyclerView"
+                android:paddingBottom="@dimen/twenty_four_dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/deliveryLayout"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/sixteen_dp"
+                android:layout_marginStart="@dimen/twenty_four_dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/deliveryLabelTextView"
+                    android:textColor="@color/ash"
+                    android:textSize="@dimen/font_size_fourteen"
+                    android:text="Delivery: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/deliveryCostTextView"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/font_size_twenty_four"
+                    android:layout_marginStart="@dimen/twenty_four_dp"
+                    android:text="500 usd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginStart="@dimen/twenty_four_dp"
+                android:layout_marginTop="@dimen/twenty_four_dp"
+                android:layout_marginBottom="@dimen/hundred_and_seventy_dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/valueLabelTextView"
+                    android:textColor="@color/ash"
+                    android:textSize="@dimen/font_size_fourteen"
+                    android:text="Delivery: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/valueTextView"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/font_size_twenty_four"
+                    android:layout_marginStart="@dimen/twenty_four_dp"
+                    android:text="161 usd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

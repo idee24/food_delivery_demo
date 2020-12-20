@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentManager
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager.widget.ViewPager
 import com.example.food_delivery_demo.Constants
 import com.example.food_delivery_demo.R
@@ -24,6 +25,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onActivityCreated(savedInstanceState)
         initHeaderViewPager(headerViewPager, childFragmentManager, pagerIndicator)
         initMenuViewPager()
+
+        checkoutFab.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_checkoutFragment)
+        }
     }
 
     private fun initHeaderViewPager(viewPager: ViewPager,

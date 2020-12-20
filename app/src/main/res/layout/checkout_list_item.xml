@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_marginStart="@dimen/twenty_four_dp"
+    android:layout_marginEnd="@dimen/twenty_four_dp"
+    android:layout_marginTop="@dimen/twenty_four_dp"
+    android:background="?android:attr/selectableItemBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/checkoutItemImageView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/img_dsc"
+        android:src="@drawable/t"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="@dimen/eighty_dp"
+        android:layout_height="@dimen/eighty_dp"/>
+
+    <TextView
+        android:id="@+id/itemNameTextView"
+        app:layout_constraintStart_toEndOf="@id/checkoutItemImageView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/sixteen_dp"
+        android:text="Spagetti"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/priceTextView"
+        app:layout_constraintEnd_toStartOf="@id/cancelImageView"
+        android:layout_marginEnd="@dimen/eight_dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="56 USD"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/cancelImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/cancel_gif"
+        android:layout_width="@dimen/thirty_two_dp"
+        android:layout_height="@dimen/thirty_two_dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

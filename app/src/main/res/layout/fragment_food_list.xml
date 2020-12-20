@@ -10,17 +10,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <LinearLayout
                 android:orientation="horizontal"
-                android:layout_marginStart="@dimen/twenty_four_dp"
                 android:layout_marginEnd="@dimen/twenty_four_dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/seventy_dp"
+                android:layout_marginStart="@dimen/twenty_four_dp"
                 android:id="@+id/filterLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -28,6 +27,7 @@
                 <TextView
                     android:text="@string/filters"
                     android:textColor="@color/ash"
+                    android:layout_gravity="center_vertical"
                     android:textSize="@dimen/font_size_thirteen"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -44,7 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
 

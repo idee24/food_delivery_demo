@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.LiveData
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager.widget.ViewPager
 import com.airbnb.mvrx.*
@@ -18,6 +19,7 @@ import kotlinx.android.synthetic.main.fragment_home.*
 import me.relex.circleindicator.CircleIndicator
 import com.example.food_delivery_demo.MenuViewModel
 import com.example.food_delivery_demo.networking.MenuData
+import com.google.gson.Gson
 
 /**
  *Created by Yerimah on 12/18/2020.
@@ -33,6 +35,7 @@ class HomeFragment :  Fragment(R.layout.fragment_home), MavericksView {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         initHeaderViewPager(headerViewPager, childFragmentManager, pagerIndicator)
+        
         parentFab = checkoutFab
         checkoutFab.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_checkoutFragment)
@@ -61,6 +64,9 @@ class HomeFragment :  Fragment(R.layout.fragment_home), MavericksView {
 
     override fun invalidate() = withState(viewModel) { menuState ->
         initMenuViewPager(menuState.menu)
-    }
 
+        val bundle = Bundle()
+        bundle.putString(Constants.SAVED_INSTANCE_KEY, Gson().toJson(menuState.menu))
+        onSaveInstanceState(bundle)
+    }
 }

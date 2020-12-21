@@ -18,9 +18,6 @@ class CheckoutFragment : Fragment(R.layout.fragment_checkout) {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         initMenuViewPager(viewModel.getCartItems())
-
-        println("DDLS Items ==> " + viewModel.getCartItems())
-
     }
 
     private fun initMenuViewPager(checkoutItems: List<MenuItem>) {

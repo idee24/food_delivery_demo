@@ -1,5 +1,7 @@
 package com.example.food_delivery_demo.networking
 
+import kotlinx.android.parcel.Parcelize
+
 /**
  *Created by Yerimah on 12/18/2020.
  */

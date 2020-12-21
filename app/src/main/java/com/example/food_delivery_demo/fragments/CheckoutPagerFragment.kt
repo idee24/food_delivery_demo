@@ -20,9 +20,6 @@ class CheckoutPagerFragment(private val checkoutItems: List<MenuItem>) : Fragmen
     }
 
     private fun initRecyclerView() {
-
-
-
         val layoutManager = LinearLayoutManager(activity)
         layoutManager.orientation = RecyclerView.VERTICAL
         checkoutRecyclerView.layoutManager = layoutManager

@@ -2,8 +2,11 @@ package com.example.food_delivery_demo.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import com.example.food_delivery_demo.CheckoutViewModel
 import com.example.food_delivery_demo.R
 import com.example.food_delivery_demo.adapters.MenuPagerAdapter
+import com.example.food_delivery_demo.networking.MenuItem
 import kotlinx.android.synthetic.main.fragment_checkout.*
 
 /**
@@ -11,17 +14,21 @@ import kotlinx.android.synthetic.main.fragment_checkout.*
  */
 class CheckoutFragment : Fragment(R.layout.fragment_checkout) {
 
+    private val viewModel: CheckoutViewModel by activityViewModels()
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        initMenuViewPager()
+        initMenuViewPager(viewModel.getCartItems())
+
+        println("DDLS Items ==> " + viewModel.getCartItems())
+
     }
 
-    private fun initMenuViewPager() {
+    private fun initMenuViewPager(checkoutItems: List<MenuItem>) {
 
         val pagerAdapter = MenuPagerAdapter(childFragmentManager)
-        pagerAdapter.addFragment(CheckoutPagerFragment(), "Cart")
-        pagerAdapter.addFragment(CheckoutPagerFragment(), "Orders")
-        pagerAdapter.addFragment(CheckoutPagerFragment(), "Information")
+        pagerAdapter.addFragment(CheckoutPagerFragment(checkoutItems), "Cart")
+        pagerAdapter.addFragment(CheckoutPagerFragment(checkoutItems), "Orders")
+        pagerAdapter.addFragment(CheckoutPagerFragment(checkoutItems), "Information")
 
         checkoutPager.adapter = pagerAdapter
         checkoutTabs.setupWithViewPager(checkoutPager)

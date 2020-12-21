@@ -131,18 +131,21 @@
 
     </androidx.core.widget.NestedScrollView>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <com.andremion.counterfab.CounterFab
         android:id="@+id/checkoutFab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         style="@style/Widget.MaterialComponents.Button"
-        android:tint="@android:color/white"
-        android:backgroundTint="@android:color/white"
-        app:fabCustomSize="@dimen/sixty_dp"
+        android:layout_width="@dimen/sixty_dp"
+        android:layout_height="@dimen/sixty_dp"
         android:layout_marginEnd="@dimen/thirty_two_dp"
         android:layout_marginBottom="@dimen/thirty_two_dp"
+        android:backgroundTint="@android:color/white"
         android:src="@drawable/cart_icon"
+        android:tint="@android:color/white"
+        app:fabCustomSize="@dimen/sixty_dp"
         app:layout_anchor="@id/body"
+        app:badgeBackgroundColor="@android:color/holo_green_dark"
+        app:badgeTextColor="@color/white"
+        app:badgePosition="RightTop"
         app:layout_anchorGravity="bottom|right|end" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

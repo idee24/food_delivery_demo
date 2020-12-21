@@ -34,6 +34,7 @@ data class MenuItem(
     var amount: Double,
     var itemImageUrl: String,
     var itemDetails: String,
+    var orderCount: Int = 0
 )
 
 data class PaymentPayload(

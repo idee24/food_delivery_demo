@@ -6,4 +6,5 @@ package com.example.food_delivery_demo
 object Constants {
 
     const val HEADER_IMAGE_KEY = "HEADER_IMAGE_KEY"
+    const val MENU_KEY = "MENU_KEY"
 }

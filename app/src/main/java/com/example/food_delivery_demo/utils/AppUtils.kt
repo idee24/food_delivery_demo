@@ -11,7 +11,7 @@ import com.example.food_delivery_demo.networking.MenuItem
 fun generateMockData(): MenuData {
 
     val items = ArrayList<MenuItem>()
-    items.add(MenuItem(0, 1, 1, "Drip", "Drop", 0.0, "", "70kg"))
+    items.add(MenuItem(0, 0, 1, "Drip", "Drop", 0.0, "", "70kg"))
     items.add(MenuItem(1, 1, 1, "Drip", "Drop", 0.0, "", "70kg"))
 
     val categories = ArrayList<Category>()

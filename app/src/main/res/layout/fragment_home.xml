@@ -9,6 +9,7 @@
     tools:context=".fragments.HomeFragment">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
         style="Theme.MaterialComponents.DayNight.DarkActionBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

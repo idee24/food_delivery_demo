@@ -1,6 +1,7 @@
 package com.example.food_delivery_demo.fragments
 
 import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.activityViewModels
@@ -19,6 +20,7 @@ import kotlinx.android.synthetic.main.fragment_home.*
 import me.relex.circleindicator.CircleIndicator
 import com.example.food_delivery_demo.MenuViewModel
 import com.example.food_delivery_demo.networking.MenuData
+import com.google.android.material.appbar.AppBarLayout
 import com.google.gson.Gson
 
 /**
@@ -44,6 +46,18 @@ class HomeFragment :  Fragment(R.layout.fragment_home), MavericksView {
             findNavController().navigate(R.id.action_homeFragment_to_checkoutFragment)
         }
         viewModel.retrieveMenu()
+
+        appBar.addOnOffsetChangedListener(
+            AppBarLayout.OnOffsetChangedListener { _, verticalOffset ->
+                if (verticalOffset == 0) {
+                    checkoutFab.visibility = View.GONE
+                    // logic when toolbar is open (for example show fab)
+                } else {
+                    checkoutFab.visibility = View.VISIBLE
+                    // logic when toolbar has collapsed (for example hide fab)
+                }
+            }
+        )
     }
 
     private fun initHeaderViewPager(viewPager: ViewPager,

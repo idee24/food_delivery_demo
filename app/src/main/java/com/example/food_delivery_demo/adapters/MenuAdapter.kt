@@ -1,21 +1,20 @@
 package com.example.food_delivery_demo.adapters
 
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.example.food_delivery_demo.MenuItem
 import com.example.food_delivery_demo.R
-import org.w3c.dom.Text
+
 
 /**
  *Created by Yerimah on 12/18/2020.
  */
 
-class MenuAdapter(): RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
+class MenuAdapter(private val menuItems: ArrayList<MenuItem>): RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.menu_item, parent, false)
@@ -37,7 +36,7 @@ class MenuAdapter(): RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
         }
     }
 
-    override fun getItemCount(): Int = 10
+    override fun getItemCount(): Int = menuItems.size
 
     inner class MenuViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 

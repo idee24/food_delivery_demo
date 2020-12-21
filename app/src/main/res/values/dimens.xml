@@ -55,4 +55,5 @@
     <dimen name="two_hundred_and_eighty_dp">280dp</dimen>
     <dimen name="twelve_dp">12dp</dimen>
     <dimen name="two_hundred_and_thirty_dp">230dp</dimen>
+    <dimen name="five_hundred_dp">500dp</dimen>
 </resources>

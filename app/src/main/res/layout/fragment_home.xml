@@ -28,7 +28,7 @@
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/headerViewPager"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/three_hundred_dp"/>
+                    android:layout_height="@dimen/five_hundred_dp"/>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"

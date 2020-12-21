@@ -27,7 +27,6 @@
             android:id="@+id/nameTextView"
             android:textSize="@dimen/font_size_sixteen"
             android:textStyle="bold"
-            android:text="Hawaiian"
             android:layout_marginStart="@dimen/twenty_four_dp"
             android:layout_marginTop="@dimen/twenty_four_dp"
             android:textColor="@android:color/black"
@@ -37,7 +36,6 @@
         <TextView
             android:id="@+id/descriptionTextView"
             android:textSize="@dimen/font_size_thirteen"
-            android:text="There is no place like home, There is no p"
             android:layout_marginStart="@dimen/twenty_four_dp"
             android:layout_marginTop="@dimen/eight_dp"
             android:textColor="@color/ash"
@@ -59,9 +57,9 @@
                 <TextView
                     android:id="@+id/detailsTextView"
                     android:textSize="@dimen/font_size_thirteen"
-                    android:text="200 grams, 35 cm"
                     android:textColor="@color/ash"
-                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/twenty_four_dp"
+                    android:layout_centerVertical="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
@@ -81,7 +79,6 @@
                     android:paddingBottom="@dimen/eight_dp"
                     android:paddingStart="@dimen/sixteen_dp"
                     android:paddingEnd="@dimen/sixteen_dp"
-                    android:text="46 USD"
                     android:textColor="@color/ash"
                     android:layout_centerInParent="true"
                     android:layout_width="wrap_content"

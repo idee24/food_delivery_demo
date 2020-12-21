@@ -8,7 +8,6 @@
 
     <TextView
         android:id="@+id/filterTextView"
-        android:text="FILTER A"
         android:background="@drawable/filter_normal"
         android:paddingTop="@dimen/eight_dp"
         android:paddingBottom="@dimen/eight_dp"

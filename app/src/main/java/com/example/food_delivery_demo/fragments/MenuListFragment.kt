@@ -34,8 +34,7 @@ class MenuListFragment(private val menuData: MenuData, private val categoryId: I
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-
-        menuData.filters?.forEach { deployFilter(it.filterName ?: "") }
+        menuData.filters?.forEach { deployFilter(it.filterName ?: "", it.filterId?: 0) }
 
         val displayItems = ArrayList<MenuItem>()
         menuData.menuItems?.forEach {
@@ -51,7 +50,7 @@ class MenuListFragment(private val menuData: MenuData, private val categoryId: I
         })
     }
 
-    private fun deployFilter(filterName: String) {
+    private fun deployFilter(filterName: String, filterId: Int) {
 
         val layoutInflater = activity?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val itemView = layoutInflater.inflate(R.layout.filter_view, null)
@@ -59,8 +58,15 @@ class MenuListFragment(private val menuData: MenuData, private val categoryId: I
         filterTextView.text = filterName
 
         itemView.setOnClickListener {
-            itemView.setBackgroundResource(R.drawable.filter_selected)
+            filterTextView.setBackgroundResource(R.drawable.filter_selected)
             filterTextView.setTextColor(Color.WHITE)
+            val displayList = ArrayList<MenuItem>()
+            menuData.menuItems?.forEach {
+                if (it.filterId == filterId) {
+                    displayList.add(it)
+                }
+            }
+            initRecyclerView(displayList)
         }
         filterLayout.addView(itemView)
     }

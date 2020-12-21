@@ -34,8 +34,11 @@ class HomeFragment :  Fragment(R.layout.fragment_home), MavericksView {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        if (savedInstanceState?.isEmpty == false) {
+            return
+        }
+
         initHeaderViewPager(headerViewPager, childFragmentManager, pagerIndicator)
-        
         parentFab = checkoutFab
         checkoutFab.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_checkoutFragment)

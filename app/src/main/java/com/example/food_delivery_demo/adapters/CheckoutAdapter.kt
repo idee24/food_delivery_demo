@@ -14,8 +14,7 @@ import com.example.food_delivery_demo.networking.MenuItem
 /**
  *Created by Yerimah on 12/20/2020.
  */
-class CheckoutAdapter(private val context: Context,
-                      private val checkoutItems: List<MenuItem>): RecyclerView.Adapter<CheckoutAdapter.CheckoutViewHolder>() {
+class CheckoutAdapter(private val checkoutItems: List<MenuItem>): RecyclerView.Adapter<CheckoutAdapter.CheckoutViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CheckoutViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.checkout_list_item, parent, false)
@@ -27,7 +26,7 @@ class CheckoutAdapter(private val context: Context,
         checkoutItems[position].let {
             holder.itemNameTextView.text = it.name
             holder.priceTextView.text = it.amount.toString()
-            Glide.with(context).load(it.itemImageUrl).placeholder(R.drawable.t).error(R.drawable.t).into(holder.imageView)
+            holder.imageView.setImageResource(it.itemImage)
         }
         holder.cancelImageView.setOnClickListener {
 

@@ -34,7 +34,7 @@
                     android:id="@+id/deliveryLabelTextView"
                     android:textColor="@color/ash"
                     android:textSize="@dimen/font_size_fourteen"
-                    android:text="Delivery: "
+                    android:text="@string/delivery_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
@@ -44,7 +44,7 @@
                     android:textStyle="bold"
                     android:textSize="@dimen/font_size_twenty_four"
                     android:layout_marginStart="@dimen/twenty_four_dp"
-                    android:text="500 usd"
+                    android:text="@string/_5_usd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
@@ -62,7 +62,7 @@
                     android:id="@+id/valueLabelTextView"
                     android:textColor="@color/ash"
                     android:textSize="@dimen/font_size_fourteen"
-                    android:text="Delivery: "
+                    android:text="@string/total"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 

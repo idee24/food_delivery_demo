@@ -6,4 +6,46 @@
     <string name="img_dsc">image</string>
     <string name="filters">FILTERS</string>
     <string name="menu">Menu</string>
+    <string name="dsc_one">he type of sushi accompanied with either raw fish, tamago (egg), or sometimes a type of vegetable. Very rarely, you\'ll find this type of sushi made with a cut of meat rather than seafood</string>
+    <string name="name_one">Nigiri</string>
+    <string name="details_one">450 grams 18piece</string>
+
+    <string name="dsc_two">he type of sushi accompanied with either raw fish, tamago (egg), or sometimes a type of vegetable. Very rarely, you\'ll find this type of sushi made with a cut of meat rather than seafood</string>
+    <string name="name_two">Makizushi (Maki Sushi)</string>
+    <string name="details_two">400 grams 18piece</string>
+
+    <string name="dsc_three">he type of sushi accompanied with either raw fish, tamago (egg), or sometimes a type of vegetable. Very rarely, you\'ll find this type of sushi made with a cut of meat rather than seafood</string>
+    <string name="name_three">Nigiri</string>
+    <string name="details_three">450 grams 18piece</string>
+
+    <string name="dsc_four">he type of sushi accompanied with either raw fish, tamago (egg), or sometimes a type of vegetable. Very rarely, you\'ll find this type of sushi made with a cut of meat rather than seafood</string>
+    <string name="name_four">Sicilian Pizza</string>
+    <string name="details_four">450 grams 18piece</string>
+
+    <string name="dsc_five">he type of sushi accompanied with either raw fish, tamago (egg), or sometimes a type of vegetable. Very rarely, you\'ll find this type of sushi made with a cut of meat rather than seafood</string>
+    <string name="name_five">Greek Pizza</string>
+    <string name="details_five">450 grams 18piece</string>
+
+    <string name="dsc_six">he type of sushi accompanied with either raw fish, tamago (egg), or sometimes a type of vegetable. Very rarely, you\'ll find this type of sushi made with a cut of meat rather than seafood</string>
+    <string name="name_six">Detroit Pizza</string>
+    <string name="details_six">450 grams 18piece</string>
+
+    <string name="dsc_seven">he type of sushi accompanied with either raw fish, tamago (egg), or sometimes a type of vegetable. Very rarely, you\'ll find this type of sushi made with a cut of meat rather than seafood</string>
+    <string name="name_seven">Nigiri</string>
+    <string name="details_seven">450 grams 18piece</string>
+
+    <string name="dsc_eight">he type of sushi accompanied with either raw fish, tamago (egg), or sometimes a type of vegetable. Very rarely, you\'ll find this type of sushi made with a cut of meat rather than seafood</string>
+    <string name="name_eight">Apple Juice</string>
+    <string name="details_eight">450 grams 18piece</string>
+
+    <string name="dsc_nine">he type of sushi accompanied with either raw fish, tamago (egg), or sometimes a type of vegetable. Very rarely, you\'ll find this type of sushi made with a cut of meat rather than seafood</string>
+    <string name="name_nine">Orange Juice</string>
+    <string name="details_nine">450 grams 18piece</string>
+
+    <string name="dsc_ten">he type of sushi accompanied with either raw fish, tamago (egg), or sometimes a type of vegetable. Very rarely, you\'ll find this type of sushi made with a cut of meat rather than seafood</string>
+    <string name="name_ten">Green Tea</string>
+    <string name="details_ten">450 grams 18piece</string>
+    <string name="delivery_text">Delivery:</string>
+    <string name="_5_usd">5 USD</string>
+    <string name="total">Total:</string>
 </resources>

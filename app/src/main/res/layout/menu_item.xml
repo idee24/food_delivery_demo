@@ -17,7 +17,6 @@
 
         <ImageView
             android:id="@+id/itemImageView"
-            android:src="@drawable/t"
             android:scaleType="centerCrop"
             android:layout_width="match_parent"
             android:contentDescription="@string/img_dsc"

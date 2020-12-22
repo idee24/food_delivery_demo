@@ -34,7 +34,7 @@ data class MenuItem(
     var name: String,
     var description: String,
     var amount: Double,
-    var itemImageUrl: String,
+    var itemImage: Int,
     var itemDetails: String,
     var orderCount: Int = 0
 )

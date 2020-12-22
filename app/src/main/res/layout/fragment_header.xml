@@ -9,6 +9,7 @@
     <ImageView
         android:id="@+id/displayImageView"
         app:layout_collapseMode="parallax"
+        android:scaleType="centerCrop"
         android:layout_width="match_parent"
         android:contentDescription="@string/img_dsc"
         android:layout_height="match_parent" />

@@ -1,5 +1,6 @@
 package com.example.food_delivery_demo
 
+import android.content.Context
 import androidx.fragment.app.Fragment
 import com.airbnb.mvrx.MavericksViewModel
 import com.example.food_delivery_demo.fragments.HeaderFragment
@@ -24,7 +25,7 @@ class MenuViewModel(initialSate: MenuState): MavericksViewModel<MenuState>(initi
 
     private var mCompositeDisposable: CompositeDisposable? = null
 
-    fun retrieveMenu() {
+    fun retrieveMenu(context: Context) {
 
         if (Constants.USE_REMOTE_DATA_SOURCE) {
             val requestInterface = Retrofit.Builder()
@@ -39,7 +40,7 @@ class MenuViewModel(initialSate: MenuState): MavericksViewModel<MenuState>(initi
                 .subscribe(this::handleResponse, this::handleError))
         }
         else {
-            handleResponse(ApiResponse("", generateMockData()))
+            handleResponse(ApiResponse("", generateMockData(context)))
         }
     }
 

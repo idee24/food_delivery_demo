@@ -17,12 +17,13 @@ class CheckoutPagerFragment(private val checkoutItems: List<MenuItem>) : Fragmen
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         initRecyclerView()
+
     }
 
     private fun initRecyclerView() {
         val layoutManager = LinearLayoutManager(activity)
         layoutManager.orientation = RecyclerView.VERTICAL
         checkoutRecyclerView.layoutManager = layoutManager
-        checkoutRecyclerView.adapter = CheckoutAdapter(activity?.applicationContext!!, checkoutItems)
+        checkoutRecyclerView.adapter = CheckoutAdapter(checkoutItems)
     }
 }

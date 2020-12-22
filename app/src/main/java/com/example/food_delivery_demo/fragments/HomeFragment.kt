@@ -45,16 +45,14 @@ class HomeFragment :  Fragment(R.layout.fragment_home), MavericksView {
         checkoutFab.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_checkoutFragment)
         }
-        viewModel.retrieveMenu()
+        viewModel.retrieveMenu(activity?.applicationContext!!)
 
         appBar.addOnOffsetChangedListener(
             AppBarLayout.OnOffsetChangedListener { _, verticalOffset ->
                 if (verticalOffset == 0) {
                     checkoutFab.visibility = View.GONE
-                    // logic when toolbar is open (for example show fab)
                 } else {
                     checkoutFab.visibility = View.VISIBLE
-                    // logic when toolbar has collapsed (for example hide fab)
                 }
             }
         )

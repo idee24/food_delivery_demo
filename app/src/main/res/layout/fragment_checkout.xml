@@ -23,6 +23,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
+                android:id="@+id/backIcon"
                 android:contentDescription="@string/img_dsc"
                 android:src="@drawable/chevron_left_black"
                 android:layout_width="@dimen/thirty_two_dp"

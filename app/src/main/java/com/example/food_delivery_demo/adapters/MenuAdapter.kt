@@ -34,11 +34,12 @@ class MenuAdapter(private val menuItems: ArrayList<MenuItem>): RecyclerView.Adap
     override fun onBindViewHolder(holder: MenuViewHolder, position: Int) {
         menuItems[position].let {
 
-//            holder.itemImageView.setImageResource(it.)
+            holder.itemImageView.setImageResource(it.itemImage)
             holder.titleTextView.text = it.name
             holder.descriptionTextView.text = it.description
             holder.detailsTextView.text = it.itemDetails
-            holder.buttonTextView.text = it.amount.toString()
+            val amount = it.amount.toString() + " USD"
+            holder.buttonTextView.text = amount
         }
 
         holder.buttonTextView.setOnClickListener {

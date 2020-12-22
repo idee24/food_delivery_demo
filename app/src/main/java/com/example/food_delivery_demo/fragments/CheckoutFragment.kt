@@ -1,8 +1,10 @@
 package com.example.food_delivery_demo.fragments
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.food_delivery_demo.CheckoutViewModel
 import com.example.food_delivery_demo.R
 import com.example.food_delivery_demo.adapters.MenuPagerAdapter
@@ -18,6 +20,10 @@ class CheckoutFragment : Fragment(R.layout.fragment_checkout) {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         initMenuViewPager(viewModel.getCartItems())
+        backIcon.setOnClickListener { findNavController().popBackStack() }
+        fab.setOnClickListener {
+            Toast.makeText(context, "PAID", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun initMenuViewPager(checkoutItems: List<MenuItem>) {
